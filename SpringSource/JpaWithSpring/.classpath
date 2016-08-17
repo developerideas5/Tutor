@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/org.springframework.transaction-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/commons-logging.jar"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/mysql-connector-java-5.0.5-bin.jar"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/org.springframework.asm-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/org.springframework.beans-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/org.springframework.context-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/org.springframework.context.support-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/org.springframework.core-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/org.springframework.expression-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/org.springframework.jdbc-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/org.springframework.orm-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-entitymanager-3.4.0.GA/hibernate-entitymanager.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-entitymanager-3.4.0.GA/lib/ejb3-persistence.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-entitymanager-3.4.0.GA/lib/hibernate-core.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-entitymanager-3.4.0.GA/lib/hibernate-commons-annotations.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-entitymanager-3.4.0.GA/lib/hibernate-annotations.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-entitymanager-3.4.0.GA/lib/dom4j.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/slf4j-1.5.8/slf4j-api-1.5.8.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/slf4j-1.5.8/slf4j-simple-1.5.8.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-entitymanager-3.4.0.GA/lib/javassist.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/spring-framework-2.5.3/lib/jakarta-commons/commons-collections.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-entitymanager-3.4.0.GA/lib/jta.jar"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/org.springframework.aspects-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/org.springframework.aop-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/spring-framework-2.5.3/lib/aopalliance/aopalliance.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/spring-framework-2.5.3/lib/cglib/cglib-nodep-2.1_3.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/spring-framework-2.5.3/lib/antlr/antlr-2.7.6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

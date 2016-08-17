@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:tx="http://www.springframework.org/schema/tx" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+	
+ 	 <tx:annotation-driven transaction-manager="jpaTxnManagerBean" proxy-target-class="true"/>
+	 	 
+ 	 
+ 	 <bean id="accountsDaoBean" class="com.jpaWithSpring.AccountsDao">
+ 	 	<property name="jpaTemplate" ref="jpaTemplateBean"></property>
+ 	 </bean>
+
+	<bean id="jpaTxnManagerBean" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="emfBean"></property>
+	</bean>
+
+ 	 <bean id="jpaTemplateBean" class="org.springframework.orm.jpa.JpaTemplate">
+ 	 	<property name="entityManagerFactory" ref="emfBean"></property>
+ 	 </bean>
+
+	 <bean id="emfBean" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+	 	<property name="dataSource" ref="dataSourceBean"></property>
+	 	<property name="jpaVendorAdapter" ref="hbAdapterBean"></property>
+	 </bean>
+
+	 <bean id="hbAdapterBean" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+	 	<property name="showSql" value="true"></property>
+	 	<property name="databasePlatform" value="org.hibernate.dialect.MySQL5Dialect"></property>
+	 </bean>
+
+	 <bean id="dataSourceBean" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://localhost/accountsdb"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="durasoft"></property>
+	</bean>
+
+
+
+<!-- 
+ 	<bean id="emfBean" class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
+ 		<property name="persistenceUnitName" value="ForAccountsDB"></property>
+ 	</bean>
+ -->
+<!--  	 
+ 	 <bean id="txn" class="org.springframework.orm.jpa.JpaTransactionManager">
+ 	 	<property name="entityManagerFactory" ref="emfBean"></property>
+ 	 </bean>
+ 	 <bean id="accountsDaoTemp" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+ 	 	<property name="transactionManager" ref="txn"></property>
+ 	 	<property name="target" ref="accountsDaoBean"></property>
+ 	 	<property name="transactionAttributes">
+ 	 		<props>
+ 	 			<prop key="deposit*">PROPAGATION_REQUIRED</prop>
+ 	 		</props>
+ 	 	</property>
+ 	 	<property name="proxyTargetClass" value="true"></property>
+ 	 </bean>
+  -->	 
+	<!-- 
+ 	 <bean id="jpaTemplateBean" class="org.springframework.orm.jpa.JpaTemplate">
+ 	 	<property name="entityManagerFactory" ref="emfBean"></property>
+ 	 </bean>
+ 	 -->
+ 	 <!-- 
+ 	<bean id="emfBean" class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
+ 		<property name="persistenceUnitName" value="ForAccountsDB"></property>
+ 	</bean>
+ 	 
+	 <bean id="emfBean" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+	 	<property name="dataSource" ref="dataSourceBean"></property>
+	 	<property name="persistenceUnitName" value="ForAccountsDB"></property>
+	 	<property name="jpaVendorAdapter" ref="hbAdapterBean"></property>
+	 </bean>
+	 <bean id="hbAdapterBean" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+	 	<property name="showSql" value="true"></property>
+	 	<property name="databasePlatform" value="org.hibernate.dialect.MySQL5Dialect"></property>
+	 </bean>
+	 <bean id="dataSourceBean" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://localhost/accountsdb"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="durasoft"></property>
+	</bean>
+	-->
+</beans>

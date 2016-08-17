@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="D:/softwares/MySQL/mysql-connector-java-5.0.5-bin.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Spring 3 RC1"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/spring-framework-2.5.3/lib/aopalliance/aopalliance.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/spring-framework-2.5.3/lib/cglib/cglib-nodep-2.1_3.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-distribution-3.3.1.GA/hibernate3.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-distribution-3.3.1.GA/lib/required/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-distribution-3.3.1.GA/lib/required/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-distribution-3.3.1.GA/lib/required/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-distribution-3.3.1.GA/lib/required/javassist-3.4.GA.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-distribution-3.3.1.GA/lib/required/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/slf4j-1.5.8/slf4j-simple-1.5.8.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/slf4j-1.5.8/slf4j-api-1.5.8.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-entitymanager-3.4.0.GA/hibernate-entitymanager.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-entitymanager-3.4.0.GA/lib/dom4j.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-entitymanager-3.4.0.GA/lib/ejb3-persistence.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-entitymanager-3.4.0.GA/lib/hibernate-annotations.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-entitymanager-3.4.0.GA/lib/hibernate-commons-annotations.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-entitymanager-3.4.0.GA/lib/hibernate-core.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-entitymanager-3.4.0.GA/lib/javassist.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-entitymanager-3.4.0.GA/lib/jta.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/spring-framework-2.5.3/lib/aspectj/aspectjrt.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/spring-framework-2.5.3/lib/aspectj/aspectjweaver.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

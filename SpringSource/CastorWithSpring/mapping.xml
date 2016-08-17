@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Mapping DTD Version 1.0//EN"
+                         "http://castor.org/mapping.dtd">
+ <mapping>
+ 	<class name="com.castorWithSpring.Catalog" auto-complete="true" >
+ 		<map-to xml="Catalog" ns-uri="http://www.dreamtechpress.com" ns-prefix="dp"/>
+ 		<field name="id" type="integer">
+ 			<bind-xml name="id" node="attribute"></bind-xml>
+ 		</field>
+ 		<field name="books" collection="arraylist" type="com.castorWithSpring.Book">
+ 			<bind-xml name="Book"></bind-xml>
+ 		</field>
+ 	</class>
+ 	
+ 	<class name="com.castorWithSpring.Book">
+ 		<map-to xml="Book"/>
+ 		<field name="price" type="double">
+ 			<bind-xml name="price" node="attribute"></bind-xml>
+ 		</field>
+ 		<field name="title">
+ 			<bind-xml name="Title"></bind-xml>
+ 		</field>
+ 		<field name="author">
+ 			<bind-xml name="Author"></bind-xml>
+ 		</field>
+ 	</class>
+ </mapping>

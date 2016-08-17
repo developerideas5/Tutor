@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	   xmlns:tx="http://www.springframework.org/schema/tx" 
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   http://www.springframework.org/schema/beans/spring-beans.xsd 
+	   http://www.springframework.org/schema/tx 
+	   http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<tx:annotation-driven transaction-manager="txnManagerBean" proxy-target-class="true"/>		
+
+	<bean id="accountServiceBean" class="com.txnChapter.AccountService">
+		<property name="accountsTemplate" ref="accountsJdbcTemplateBean"></property>
+		<property name="statementsTemplate" ref="statementsJdbcTemplateBean"></property>
+	</bean>
+	
+	<bean id="txnManagerBean" class="org.springframework.transaction.jta.JtaTransactionManager">
+		<property name="transactionManager" ref="atomikosTxnManagerBean"></property>
+		<property name="userTransaction" ref="atomikosUserTxnBean"></property>
+	</bean>
+	
+	<bean id="atomikosTxnManagerBean" class="com.atomikos.icatch.jta.UserTransactionManager"></bean>
+	<bean id="atomikosUserTxnBean" class="com.atomikos.icatch.jta.UserTransactionImp"></bean>
+	
+	<bean id="accountsJdbcTemplateBean" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="accountsDataSourceBean"></property>
+	</bean>
+
+	<bean id="statementsJdbcTemplateBean" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="statementsDataSourceBean"></property>
+	</bean>
+	
+	<bean id="accountsDataSourceBean" class="com.atomikos.jdbc.AtomikosDataSourceBean">
+		<property name="uniqueResourceName" value="AccountsDB"></property>
+		<property name="xaDataSourceClassName" 	value="com.mysql.jdbc.jdbc2.optional.MysqlXADataSource">
+		</property>
+		<property name="xaProperties">
+			<props>
+				<prop key="URL">jdbc:mysql://localhost/accountsdb</prop>
+				<prop key="user">root</prop>
+				<prop key="password">durasoft</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="statementsDataSourceBean" class="com.atomikos.jdbc.AtomikosDataSourceBean">
+		<property name="uniqueResourceName" value="StatementsDB"></property>
+		<property name="xaDataSourceClassName" 	value="com.mysql.jdbc.jdbc2.optional.MysqlXADataSource">
+		</property>
+		<property name="xaProperties">
+			<props>
+				<prop key="URL">jdbc:mysql://localhost/statementsdb</prop>
+				<prop key="user">root</prop>
+				<prop key="password">durasoft</prop>
+			</props>
+		</property>
+	</bean>
+
+</beans>

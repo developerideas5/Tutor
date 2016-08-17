@@ -1,0 +1,13 @@
+<binding>
+	<mapping name="Catalog" class="com.jibxWithSpring.Catalog">
+		<value name="id" field="id" style="attribute"></value>
+		<collection field="books" create-type="java.util.ArrayList">
+			<structure name="Book" type="com.jibxWithSpring.Book">
+				<value name="price" style="attribute" field="price"></value>
+				<value name="Title" field="title"></value>
+				<value name="Author" field="author"></value>
+			</structure>
+			
+		</collection>
+	</mapping>
+</binding>

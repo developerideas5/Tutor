@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/org.springframework.transaction-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/commons-logging.jar"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/mysql-connector-java-5.0.5-bin.jar"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/org.springframework.beans-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/org.springframework.context-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/org.springframework.context.support-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/org.springframework.core-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/org.springframework.orm-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-distribution-3.3.1.GA/hibernate3.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-distribution-3.3.1.GA/lib/required/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-distribution-3.3.1.GA/lib/required/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-distribution-3.3.1.GA/lib/required/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-distribution-3.3.1.GA/lib/required/javassist-3.4.GA.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/hibernate-distribution-3.3.1.GA/lib/required/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/slf4j-1.5.8/slf4j-simple-1.5.8.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/slf4j-1.5.8/slf4j-api-1.5.8.jar"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/org.springframework.asm-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/org.springframework.expression-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="F:/MyBook/spring3_jars/org.springframework.jdbc-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,5 @@
+String model;
+String getModel(){return model;}
+String setModel(value){model = value;}
+void activate(){print("SoundAlarm [" + model + "] activated");}
+void deactivate(){print("SoundAlarm [" + model + "] deactivated");}

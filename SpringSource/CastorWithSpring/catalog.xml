@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dp:Catalog xmlns:dp="http://www.dreamtechpress.com" id="101">
+	<dp:Book price="2345.0">
+		<Title>XYZ</Title>
+		<Author>ABC</Author>
+	</dp:Book>
+	<dp:Book price="100.0">
+		<Title>XYZ2</Title>
+		<Author>CDE</Author>
+	</dp:Book>
+</dp:Catalog>

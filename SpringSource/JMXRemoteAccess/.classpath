@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Spring M3"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/jmx-1_2_1-bin/lib/jmxri.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/jmx-1_2_1-bin/lib/jmxtools.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/spring-framework-2.5.3/lib/aopalliance/aopalliance.jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

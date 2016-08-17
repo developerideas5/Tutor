@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/jibx/lib/jibx-tools.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/jibx/lib/jibx-bind.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/jibx/lib/jibx-extras.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/jibx/lib/jibx-run.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/jibx/lib/jibx-schema.jar"/>
+	<classpathentry kind="output" path=""/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/spring-framework-3.0.0.RELEASE/dist/org.springframework.asm-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/spring-framework-3.0.0.RELEASE/dist/org.springframework.beans-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/spring-framework-3.0.0.RELEASE/dist/org.springframework.context.support-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/spring-framework-3.0.0.RELEASE/dist/org.springframework.context-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/spring-framework-3.0.0.RELEASE/dist/org.springframework.core-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/spring-framework-3.0.0.RELEASE/dist/org.springframework.expression-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/spring-framework-3.0.0.RELEASE/dist/org.springframework.oxm-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/F_Drive_Backup/MyBook/spring3_jars/commons-logging.jar"/>
+</classpath>

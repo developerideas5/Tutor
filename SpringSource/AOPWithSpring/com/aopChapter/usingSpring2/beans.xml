@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	   xmlns:aop="http://www.springframework.org/schema/aop" 
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   http://www.springframework.org/schema/beans/spring-beans.xsd 
+	   http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+	
+	<bean id="programmerBean" class="com.aopChapter.usingSpring2.Programmer">
+	</bean>
+	<bean id="adminTrackAdvisorBean" class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+		<property name="advice">
+			<bean id="adminTrackBean" class="com.aopChapter.usingSpring2.AdminTrack">
+			</bean>
+		</property>
+		<property name=""></property>
+	</bean>
+	<aop:config></aop:config>
+	<aop:config>
+		<aop:advisor advice-ref=""/>
+		<!-- 
+		<aop:pointcut id="logToFilePointcut" expression="execution(void com.aopChapter.usingSpring2.Programmer.build(..))"/>
+		<aop:pointcut id="sendMailPointcut" expression="execution(* com.aopChapter.usingSpring2.Programmer.build(..))"/>
+		<aop:aspect ref="adminTrackBean">
+			<aop:after-throwing method="placeAnUrgentCall" pointcut="execution(* *.build(..))" throwing="ex"/>
+			<aop:around method="canBuild" pointcut-ref="logToFilePointcut"/>
+			<aop:before method="logToFile" pointcut="execution(* com.aopChapter.usingSpring2.Programmer.*(..))"/>
+			<aop:after-returning method="sendMail" pointcut-ref="sendMailPointcut"/>
+		</aop:aspect>
+		 -->
+	</aop:config>
+</beans>

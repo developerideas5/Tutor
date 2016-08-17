@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="org.springframework.jmx.support.ConnectorServerFactoryBean">
+		<property name="serviceUrl" value="service:jmx:rmi://localhost/jndi/rmi://localhost:1099/MyDomainServer"></property>
+		<property name="server" ref="mbeanServerBean"></property>
+	</bean>
+	<bean class="org.springframework.remoting.rmi.RmiRegistryFactoryBean">
+		<property name="port" value="1099"></property>
+	</bean>
+	<bean class="org.springframework.jmx.export.MBeanExporter">
+		<property name="server" ref="mbeanServerBean"></property>
+		<property name="namingStrategy" ref="namingStrategyBean"></property>
+		<property name="registrationBehaviorName" value="REGISTRATION_REPLACE_EXISTING"></property>
+		<property name="assembler" ref="assemblerBean"></property>
+		<property name="autodetect" value="true"></property>
+		<property name="notificationListenerMappings">
+      <map>
+        <entry key="DataStructure:name=Stack">
+          <bean class="com.jmxChapter.StackListener"/>
+        </entry>
+      </map>
+    </property>
+
+	</bean>
+	<bean id="namingStrategyBean" class="org.springframework.jmx.export.naming.MetadataNamingStrategy">
+		<property name="attributeSource" ref="jmxAttributeSourceBean"></property>
+	</bean>
+	<bean id="assemblerBean" class="org.springframework.jmx.export.assembler.MetadataMBeanInfoAssembler">
+		<property name="attributeSource" ref="jmxAttributeSourceBean"></property>
+	</bean>
+	 
+	 <bean id="jmxAttributeSourceBean" class="org.springframework.jmx.export.annotation.AnnotationJmxAttributeSource">
+	 </bean>
+	 
+	<bean id="mbeanServerBean" class="org.springframework.jmx.support.MBeanServerFactoryBean">
+		<property name="defaultDomain" value="MyDomain"></property>
+	</bean>
+	<bean id="stackBean" class="com.jmxChapter.Stack"></bean>
+</beans>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	 
+	<bean id="stackBean" class="org.springframework.jmx.access.MBeanProxyFactoryBean">
+		<property name="proxyInterface" value="com.jmxChapter.IStack"></property>
+		<property name="server" ref="mbeanServerConnectionBean"></property>
+		<property name="objectName" value="DataStructure:Name=Stack"></property>
+	</bean>
+	
+	<bean class="org.springframework.jmx.support.MBeanServerConnectionFactoryBean" id="mbeanServerConnectionBean">
+		<property name="serviceUrl" value="service:jmx:rmi://localhost/jndi/rmi://localhost:1099/MyDomainServer"></property>
+	</bean>
+
+</beans>

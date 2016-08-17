@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap>
+	<insert id="createAccount" parameterClass="com.iBatisWithSpring.Account">
+		insert into accounts values(#accountNumber#,#owner#,#balance#);
+	</insert>
+	
+	<delete id="deleteAccount" parameterClass="int">
+		delete from accounts where account_number=#accountNumber#
+	</delete>
+	
+	<select id="getAllAccounts" resultClass="com.iBatisWithSpring.Account">
+		select account_number as accountNumber, owner as owner, balance as balance from accounts;
+	</select>
+	
+	<select id="getAccount" parameterClass="int" resultClass="com.iBatisWithSpring.Account">
+		select account_number as accountNumber, 
+				owner as owner, 
+				balance as balance 
+		from accounts 
+		where account_number=#value#;
+	</select>
+	
+	<update id="modifyAccountBalance" parameterClass="com.iBatisWithSpring.Account">
+		update accounts set balance=#balance# where account_number=#accountNumber#;
+	</update>
+
+		
+</sqlMap>    

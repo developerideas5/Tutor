@@ -1,0 +1,8 @@
+<jboss>
+	<enterprise-beans>
+		<message-driven>
+			<ejb-name>WeatherReporterMDB</ejb-name>
+			<destination-jndi-name>queue/StockQueue</destination-jndi-name>
+		</message-driven>
+	</enterprise-beans>
+</jboss>

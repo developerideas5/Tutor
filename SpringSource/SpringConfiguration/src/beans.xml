@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+		
+	
+	<util:map id="carMap">
+		<entry key="car1" value-ref="car1"></entry>
+		<entry key="car2" value-ref="car2"></entry>
+		<entry key="car3" value-ref="car3"></entry>
+	</util:map>		
+	<bean class="com.configuration.Person" lazy-init="true">
+		<property name="cars" ref="carMap"/>
+	</bean>		
+	<context:component-scan base-package="com.configuration,java.util"></context:component-scan>
+
+	<bean class="com.configuration.Car" id="car1"></bean>
+	<bean class="com.configuration.Car" id="car2"></bean>
+	<bean class="com.configuration.Car" id="car3"></bean>
+	
+<!--
+
+	<bean id="personBean" class="com.configuration.Person" scope="singleton">
+		<property name="name" value="Sam"></property>
+	</bean>
+	<bean id="carBean" class="com.configuration.Car" autowire-candidate="false">
+		<property name="color" value="Black"></property>
+		<property name="model" value="Santro"></property>
+	</bean>
+--></beans>

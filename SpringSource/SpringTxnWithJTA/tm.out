@@ -1,0 +1,27 @@
+09-10-12 16:41:22,421 [main] Coordinator not recoverable: 10.10.30.129.tm0000100001
+09-10-12 16:41:24,515 [main] AccountsDB: refreshed XAResource
+09-10-12 16:41:29,171 [main] StatementsDB: refreshed XAResource
+09-10-12 16:41:29,171 [main] Coordinator not recoverable: 10.10.30.129.tm0000100001
+09-10-12 16:42:09,000 [main] Starting read of logfile F:\MyBook\MyWS_Spring_TXN\SpringTxnWithJTA\.\tmlog0.log
+09-10-12 16:42:09,000 [main] Done read of logfile
+09-10-12 16:42:09,093 [main] Coordinator not recoverable: 10.10.30.129.tm0000100002
+09-10-12 16:42:11,593 [main] AccountsDB: refreshed XAResource
+09-10-12 16:42:14,421 [main] StatementsDB: refreshed XAResource
+09-10-12 16:42:14,421 [main] Coordinator not recoverable: 10.10.30.129.tm0000100002
+09-10-12 16:42:43,640 [main] Starting read of logfile F:\MyBook\MyWS_Spring_TXN\SpringTxnWithJTA\.\tmlog1.log
+09-10-12 16:42:43,718 [main] Done read of logfile
+09-10-12 16:42:43,781 [main] Coordinator not recoverable: 10.10.30.129.tm0000100003
+09-10-12 16:42:47,500 [main] AccountsDB: refreshed XAResource
+09-10-12 16:42:53,812 [Atomikos:0] Rollback of timedout ACTIVE coordinator !
+09-10-12 16:42:56,937 [main] StatementsDB: refreshed XAResource
+09-10-12 16:42:56,937 [main] Coordinator not recoverable: 10.10.30.129.tm0000100003
+09-10-12 16:43:18,000 [main] Starting read of logfile F:\MyBook\MyWS_Spring_TXN\SpringTxnWithJTA\.\tmlog2.log
+09-10-12 16:43:18,000 [main] Done read of logfile
+09-10-12 16:43:18,375 [main] AccountsDB: refreshed XAResource
+09-10-12 16:43:19,531 [main] StatementsDB: refreshed XAResource
+09-10-12 16:46:11,937 [main] Starting read of logfile F:\MyBook\MyWS_Spring_TXN\SpringTxnWithJTA\.\tmlog3.log
+09-10-12 16:46:11,937 [main] Done read of logfile
+09-10-12 16:46:12,031 [main] Coordinator not recoverable: 10.10.30.129.tm0000100005
+09-10-12 16:46:12,390 [main] AccountsDB: refreshed XAResource
+09-10-12 16:46:13,078 [main] StatementsDB: refreshed XAResource
+09-10-12 16:46:13,078 [main] Coordinator not recoverable: 10.10.30.129.tm0000100005

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="JAXBWithSpring"/>
+<aop-project name="JMXWithSpring"/>
+<aop-project name="JRubyWithSpring"/>
+<aop-project name="JmsWithSpring"/>
+<aop-project name="XmlBeansWithSpring"/>
+<aop-project name="SpringIntroduction"/>
+<aop-project name="SpringTxnWithJTA"/>
+<aop-project name="SpringConfiguration"/>
+<aop-project name="BshWithSpring"/>
+<aop-project name="XStreamWithSpring"/>
+<aop-project name="SpringTXNWithHB"/>
+<aop-project name="CastorWithSpring"/>
+<aop-project name="JpaWithSpring"/>
+<aop-project name="HibernateWithSpring"/>
+<aop-project name="JibxWithSpring"/>
+<aop-project name="SpringTxnWithJPA"/>
+<aop-project name="JavaMailWithSpring"/>
+<aop-project name="simplespring"/>
+<aop-project name="JdbcWithSpring"/>
+<aop-project name="AOPWithSpring"/>
+<aop-project name="GroovyWithSpring"/>
+<aop-project name="SpringTXNWithJDBC"/>
+<aop-project name="AccessingEJB2"/>
+<aop-project name="SpELWithSpring"/>
+<aop-project name="CreatingEJB21WithSpring"/>
+<aop-project name="IbatisWithSpring"/>
+</aop-reference-model>

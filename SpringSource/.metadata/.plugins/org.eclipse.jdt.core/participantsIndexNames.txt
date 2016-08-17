@@ -1,0 +1,7 @@
+INDEX VERSION 1.127
+C:\SpringSource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3108578714.index
+\spring-security-hibernate\src\main\java
+C:\SpringSource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3303020554.index
+\spring-security-hibernate-annotation\src\main\java
+C:\SpringSource\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3798480195.index
+\spring-security-loginform-database\src\main\java

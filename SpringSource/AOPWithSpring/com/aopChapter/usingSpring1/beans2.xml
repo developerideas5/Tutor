@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="programmerBean" class="com.aopChapter.usingSpring1.Programmer"></bean>
+	
+	
+	<!-- 
+	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator">
+	</bean>
+	 -->
+	 <!-- 
+	 <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+	 	<property name="interceptorNames" value="logToFilePointcutAdvisorBean"></property>
+	 	<property name="beanNames" value="programmerBean"></property>
+	 </bean>
+	  -->
+	<!-- 
+	<bean id="programmerTargetBean" class="com.aopChapter.usingSpring1.Programmer">
+	</bean>
+	 -->
+	<bean id="logToFilePointcutAdvisorBean" class="org.springframework.aop.aspectj.AspectJExpressionPointcutAdvisor">
+		<property name="advice" ref="adminTrackAdviceBean"></property>
+		<property name="expression" value="execution(* *.*(..))"></property>
+	</bean>
+
+	<bean id="buildPointcutAdvisorBean" class="org.springframework.aop.aspectj.AspectJExpressionPointcutAdvisor">
+		<property name="advice">
+			<bean class="com.aopChapter.usingSpring1.AdminTrackAroundAdvice"></bean>
+		</property>
+		<property name="expression" value="execution(* *.build(..))"></property>
+	</bean>	
+	<bean id="adminTrackAdviceBean" class="com.aopChapter.usingSpring1.AdminTrackAdvice">
+		<property name="adminTrack">
+			<bean class="com.aopChapter.usingSpring1.AdminTrack"></bean>
+		</property>
+	</bean>
+	
+	<bean id="adminTrackThrowsAdviceBean" class="com.aopChapter.usingSpring1.AdminTrackThrowsAdvice">
+	</bean>
+	
+	<bean id="adminTrackAroundAdvisorBean" class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+		<property name="mappedName" value="build"></property>
+		<property name="advice">
+			<bean class="com.aopChapter.usingSpring1.AdminTrackAroundAdvice"></bean>
+		</property>
+	</bean>
+	<!-- 
+	<bean id="programmerBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="programmerTargetBean"></property>
+		<property name="interceptorNames">
+			<value>buildPointcutAdvisorBean</value>
+		</property>
+	
+		<property name="interceptorNames" 
+			value="adminTrackAroundAdvisorBean,adminTrackAdviceBean,adminTrackThrowsAdviceBean">
+		</property>
+		
+	</bean>	
+	 -->
+</beans>

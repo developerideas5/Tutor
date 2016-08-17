@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="D:/sts-bundle/sts-3.5.1.RELEASE/org.springframework.core.jar.zip"/>
+	<classpathentry exported="true" kind="lib" path="D:/sts-bundle/sts-3.5.1.RELEASE/org.springframework.beans.jar.zip"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/shruti/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/shruti/.m2/repository/cglib/cglib/2.2.2/cglib-2.2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/shruti/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="D:/sts-bundle/spring-framework-4.0.5.RELEASE-dist.zip"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

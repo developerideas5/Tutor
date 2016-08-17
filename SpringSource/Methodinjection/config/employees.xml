@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+"http://www.springframework.org/dtd/spring-beans.dtd">
+
+
+<beans>
+
+
+<bean id="abc" class="com.util.BirthDate">
+	<property name="date" value="25" />
+	<property name="month" value="07" />
+	<property name="year" value="1979" />
+</bean>
+
+<bean id="employee" class="com.emp.Employee">
+
+ <property name="firstname" value="amit" />
+ <property name="lastname" value="deshpande" />
+ 
+ <propery name="birthdate" ref="abc"/> 
+  <property name="info" value="The Employee is technically sound" />
+  
+  <replaced-method name="getInfo" replacer="infoReplacer"></replaced-method>
+  
+  
+</bean>
+
+
+
+
+
+
+<bean id="infoReplacer" class="com.emp.InfoReplacer" />
+
+
+</beans>

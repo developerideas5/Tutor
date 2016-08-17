@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/jboss-5.0.1.GA/client/jboss-javaee.jar"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/jboss-5.0.1.GA/client/jbossall-client.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Spring 3 M3"/>
+	<classpathentry kind="lib" path="E:/Installed_Softwares/spring-framework-2.5.3/lib/aopalliance/aopalliance.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

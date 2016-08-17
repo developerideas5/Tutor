@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	   xmlns:tx="http://www.springframework.org/schema/tx" 
+	   xmlns:aop="http://www.springframework.org/schema/aop" 
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   http://www.springframework.org/schema/beans/spring-beans.xsd 
+	   http://www.springframework.org/schema/tx 
+	   http://www.springframework.org/schema/tx/spring-tx.xsd
+	   http://www.springframework.org/schema/aop 
+	   http://www.springframework.org/schema/aop/spring-aop.xsd ">
+
+	<tx:advice transaction-manager="txnManagerBean" id="txnAdvice" >
+		<tx:attributes>
+			<tx:method name="w*" propagation="REQUIRED" isolation="DEFAULT" rollback-for="Exception"/>
+			<tx:method name="deposit" propagation="NOT_SUPPORTED"/>
+		</tx:attributes>
+	</tx:advice>
+	
+	<aop:config proxy-target-class="true">
+		<aop:advisor advice-ref="txnAdvice" pointcut="execution(* com.txnChapter.AccountService2.*(..))" />
+	</aop:config>
+	
+	<bean id="accountServiceBean" class="com.txnChapter.AccountService2">
+		<property name="jdbcTemplate" ref="jdbcTemplateBean"></property>
+	</bean>
+	
+	<bean id="txnManagerBean" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dsBean"></property>
+	</bean>
+	
+	<bean id="jdbcTemplateBean" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dsBean"></property>
+	</bean>
+	
+	<bean id="dsBean" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://localhost/accountsdb"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="durasoft"></property>
+	</bean>
+</beans>

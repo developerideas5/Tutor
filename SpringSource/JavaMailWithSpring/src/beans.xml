@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="mailHelperBean" class="com.javaMailWithSpring.MailHelper">
+		<property name="mailMessage" ref="mailMessageBean"></property>
+		<property name="mailSender" ref="mailSenderBean"></property>
+	</bean>
+	
+	<bean id="mailMessageBean" class="org.springframework.mail.SimpleMailMessage">
+		<property name="from" value="prabhu@durasoftindia.com"></property>
+		<property name="to" value="iamprabhu@yahoo.com"></property>
+		<property name="subject" value="Test Mail"></property>
+		<property name="text" value="This is a test mail"></property>
+	</bean>
+	
+	<bean id="mailSenderBean" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="durasoftindia.com"></property>
+		<property name="username" value="prabhu@durasoftindia.com"></property>
+		<property name="password" value="technosoft"></property>
+	</bean>
+</beans>

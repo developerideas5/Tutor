@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean class="org.springframework.jmx.export.MBeanExporter">
+		<property name="server" ref="mbeanServerBean"></property>
+		<property name="assembler" ref="assemblerBean"></property>
+		<property name="namingStrategy" ref="namingStrategyBean"></property>
+		<property name="autodetect" value="true"></property>
+		<property name="registrationBehaviorName" value="REGISTRATION_REPLACE_EXISTING"></property>
+	</bean>
+	<bean id="namingStrategyBean" class="org.springframework.jmx.export.naming.IdentityNamingStrategy">
+	</bean>
+	<!-- 
+	<bean id="namingStrategyBean" class="org.springframework.jmx.export.naming.MetadataNamingStrategy">
+		<property name="attributeSource" ref="attributeSourceBean"></property>
+	</bean>
+	 -->
+	<bean id="mbeanServerBean" class="org.springframework.jmx.support.MBeanServerFactoryBean"></bean>
+	<bean id="stackBean" class="com.jmxChapter.Stack2"></bean>
+	<bean id="assemblerBean" class="org.springframework.jmx.export.assembler.MetadataMBeanInfoAssembler">
+		<property name="attributeSource" ref="attributeSourceBean">
+		</property>
+	</bean>
+	<bean id="attributeSourceBean" class="org.springframework.jmx.export.annotation.AnnotationJmxAttributeSource">
+	</bean>
+	
+	<!-- 
+	<bean id="assemblerBean" class="org.springframework.jmx.export.assembler.InterfaceBasedMBeanInfoAssembler">
+		<property name="managedInterfaces">
+			<value>com.jmxChapter.IStack</value>
+		</property>
+		<property name="interfaceMappings">
+			<map>
+				<entry key="DataStructure:name=Stack" value="com.jmxChapter.IStack"></entry>
+			</map>
+		</property>
+	</bean>
+	 -->	
+	
+	 <!-- 
+	<bean id="assemblerBean" class="org.springframework.jmx.export.assembler.MethodExclusionMBeanInfoAssembler">
+		<property name="ignoredMethods">
+			<value>empty</value>
+		</property>
+		 
+		<property name="ignoredMethodMappings">
+			<map>
+				<entry key="DataStructure:name=Stack" value="empty"></entry>
+			</map>
+		</property>
+		 
+	</bean>
+	  -->
+	 <!-- 
+	<bean id="assemblerBean" class="org.springframework.jmx.export.assembler.MethodNameBasedMBeanInfoAssembler">
+		<property name="methodMappings">
+			<map>
+				<entry key="DataStructure:name=Stack" value="pushItem,popItem,getSize"></entry>
+			</map>
+		</property>
+		 
+		<property name="managedMethods">
+			<value>pushItem,popItem,getSize</value>
+		</property>
+		
+	</bean>
+	 -->
+	<!-- 
+	<bean class="org.springframework.jmx.export.MBeanExporter">
+		<property name="beans">
+			<map>
+				<entry key="DataStructure:name=Stack" value-ref="stackBean"></entry>
+				<entry key="Adaptor:name=Html" value-ref="htmlServerBean"></entry>
+			</map>
+		</property>
+		<property name="server" ref="mbeanServerBean"></property>
+		<property name="notificationListenerMappings">
+			<map>
+				<entry key="DataStructure:name=Stack">
+					<bean class="com.jmxChapter.StackListener"></bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+ -->
+	<!-- 
+	<bean class="org.springframework.jmx.export.MBeanExporter">
+		<property name="server" ref="mbeanServerBean"></property>
+		<property name="namingStrategy" ref="namingStrategyBean"></property>
+		<property name="registrationBehaviorName" value="REGISTRATION_REPLACE_EXISTING"></property>
+		<property name="assembler" ref="assemblerBean"></property>
+		<property name="autodetect" value="true"></property>
+	</bean>
+	 -->
+	 <!-- 
+	<bean id="namingStrategyBean" class="org.springframework.jmx.export.naming.MetadataNamingStrategy">
+		<property name="attributeSource" ref="jmxAttributeSourceBean"></property>
+	</bean>
+	<bean id="assemblerBean" class="org.springframework.jmx.export.assembler.MetadataMBeanInfoAssembler">
+		<property name="attributeSource" ref="jmxAttributeSourceBean"></property>
+	</bean>
+	 -->
+	<!--
+		NOT WORKING;ClassNotFoundException 
+	<bean id="attributeSourceBean" class="org.springframework.jmx.export.metadata.AttributesJmxAttributeSource">
+	</bean>
+	 -->
+	 
+	 <bean id="jmxAttributeSourceBean" class="org.springframework.jmx.export.annotation.AnnotationJmxAttributeSource">
+	 </bean>
+	 
+
+	<!-- 
+	<bean id="assemblerBean" class="org.springframework.jmx.export.assembler.MethodNameBasedMBeanInfoAssembler">
+		<property name="managedMethods">
+			<value>empty,getSize,pushItem,popItem</value>
+		</property>
+	</bean>
+	 -->
+	 
+	
+	<!-- 
+	<bean id="stackBean" class="com.jmxChapter.Stack"></bean>
+	 -->
+	<!-- 
+	<bean id="htmlServerBean" class="com.sun.jdmk.comm.HtmlAdaptorServer">
+		<constructor-arg value="9000"></constructor-arg>
+	</bean>
+	 -->
+</beans>

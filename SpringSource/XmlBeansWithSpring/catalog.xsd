@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="Catalog">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Book" minOccurs="0" maxOccurs="unbounded" type="bookType"></xsd:element>
+			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:int" use="required"></xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="bookType">
+		<xsd:sequence>
+			<xsd:element name="Title" type="xsd:string"></xsd:element>
+			<xsd:element name="Author" type="xsd:string"></xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="price" type="xsd:double" use="required"></xsd:attribute>
+	</xsd:complexType>
+</xsd:schema>

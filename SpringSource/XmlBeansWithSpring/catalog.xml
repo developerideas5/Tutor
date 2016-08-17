@@ -1,0 +1,10 @@
+<Catalog id="8973">
+	<Book price="2345.0">
+		<Title>XYZ</Title>
+		<Author>ABC</Author>
+	</Book>
+	<Book price="100.0">
+		<Title>XYZ2</Title>
+		<Author>CDE</Author>
+	</Book>
+</Catalog>
